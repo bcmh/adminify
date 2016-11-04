@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html ldir="ltr" lang="en-US" class="no-js">
+<head>
+<!--
+  BBBBBBBBBBBBBBBBBBB  CCCCCCCCCCCCCCCCCCC        MMMMMMMMMM             HHHHHHHHHM
+  B                 B  C                 C      MM          MM         HH          HH
+  B                 B  C                 C     M              M       H              H
+  B     BBBBBBB     B  C      CCCCC      C    M  M          M  M     H    H      H    H
+  B     BB    BB    B  C    CC     CC    C   M   MM        MM   M   H     H      H     H
+  B     BB    BB    B  C   CC            C   M   M M      M M   M   H     H      H     H
+  B     BBBBBBB     B  C   CC            C   M   M  M    M  M   M   H     HHHHHHHH     H
+  B     BB    BB    B  C   CC            C   M   M  M    M  M   M   H     H      H     H
+  B     BB    BB    B  C    CC     CC    C   M   M   M  M   M   M   H     H      H     H
+  B     BBBBBBB     B  C      CCCCC      C    M  M    MM    M  M     H    H      H    H
+  B                 B  C                 C     MM             M       H             HH
+  B                 B  C                 C       MM         MM         HH          HH
+  BBBBBBBBBBBBBBBBBBB  CCCCCCCCCCCCCCCCCCC         MMMMMMMMM             HHHHHHHHHH
+
+  Bravo Charlie Mike Hotel
+  http://bcmh.co.uk
+-->
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width,initial-scale=1.0" />
+
+	<title>Adminify your Shopify</title>
+
+</head>
+<body>
+
+  <p></p>
+
+  <a href="javascript:(function()%7Bfunction getShopifyAdminLink() %7Bvar shopifyDomain %3D %27//%27 %2B document.head.querySelector(%27%23AdminifyShopifyUrl%27).getAttribute(%27content%27),  shopifyContent %3D document.head.querySelector(%27%23AdminifyShopifyEdit%27)%3Bif ( shopifyContent.getAttribute(%27name%27) %3D%3D%3D %27index%27 ) %7Breturn shopifyDomain %2B %27/admin/%27%3B%7Dreturn shopifyDomain %2B %27/admin/%27 %2B shopifyContent.getAttribute(%27name%27) %2B %27s/%27 %2B shopifyContent.getAttribute(%27content%27)%3B%7D%3Bwindow.open( getShopifyAdminLink(), %27_blank%27 )%3B%7D)()%3B">📝Adminify</a>
+
+<pre><code><meta id="AdminifyShopifyUrl" name="shopify_url" content="{{ shop.permanent_domain }}"/>
+<meta id="AdminifyShopifyEdit" name="{% if template contains '.' %}{{ template | split: '.' | first }}{% else %}{{ template }}{% endif %}" content="{% if template contains 'product' %}{{ product.id }}{% elsif template contains 'page' %}{{ page.id }}{% else %}{{ collection.id }}{% endif %}"/>
+</code></pre>
+
+</body>
+</html>
