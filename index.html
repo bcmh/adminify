@@ -98,7 +98,7 @@
         display: inline-block;
         width: auto;
         border-radius: 0.2em;
-        margin: 1em 0 .5em;
+        margin: 1em 0;
         border: 1px solid #999;
         color: #222;
         box-shadow: 1px 1px .1em rgba(0,0,0,.2);
@@ -114,7 +114,9 @@
 
   <p>A little bookmarklet to make it easier to switch between viewing the front and back end of a Shopify site.</p>
 
-  <a class="bookmarklet" href="javascript:(function()%7Bfunction getShopifyAdminLink() %7Bvar shopifyDomain %3D %27//%27 %2B document.head.querySelector(%27%23AdminifyShopifyUrl%27).getAttribute(%27content%27),  shopifyContent %3D document.head.querySelector(%27%23AdminifyShopifyEdit%27)%3Bif ( shopifyContent.getAttribute(%27name%27) %3D%3D%3D %27index%27 ) %7Breturn shopifyDomain %2B %27/admin/%27%3B%7Dreturn shopifyDomain %2B %27/admin/%27 %2B shopifyContent.getAttribute(%27name%27) %2B %27s/%27 %2B shopifyContent.getAttribute(%27content%27)%3B%7D%3Bwindow.open( getShopifyAdminLink(), %27_blank%27 )%3B%7D)()%3B">📝 Adminify</a>
+  <p>
+    <a class="bookmarklet" href="javascript:(function()%7Bfunction getShopifyAdminLink() %7Bvar shopifyDomain %3D %27//%27 %2B document.head.querySelector(%27%23AdminifyShopifyUrl%27).getAttribute(%27content%27),  shopifyContent %3D document.head.querySelector(%27%23AdminifyShopifyEdit%27)%3Bif ( shopifyContent.getAttribute(%27name%27) %3D%3D%3D %27index%27 ) %7Breturn shopifyDomain %2B %27/admin/%27%3B%7Dreturn shopifyDomain %2B %27/admin/%27 %2B shopifyContent.getAttribute(%27name%27) %2B %27s/%27 %2B shopifyContent.getAttribute(%27content%27)%3B%7D%3Bwindow.open( getShopifyAdminLink(), %27_blank%27 )%3B%7D)()%3B">📝 Adminify</a>
+  </p>
 
   <h2>Installing onto your theme</h2>
 
