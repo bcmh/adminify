@@ -19,15 +19,84 @@
   Bravo Charlie Mike Hotel
   http://bcmh.co.uk
 -->
-	<meta charset="UTF-8" />
-	<meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
 
-	<title>Adminify your Shopify</title>
+  <title>Adminify your Shopify</title>
+
+  <style>
+    * {
+      color: #111;
+      font-family:'Univers LT W01 45 Light', sans-serif;
+    }
+
+    img {
+      height: auto;
+      max-width: 100%;
+    }
+
+    body {
+      padding: 1em 2em 6em;
+    }
+
+    h1 {
+      line-height: 1.3;
+      font-size: 1.2em;
+      font-weight: normal;
+      margin-bottom: .5em;
+    }
+
+    h2 {
+      font-size: 1em;
+      font-weight: normal;
+      line-height: 1.3;
+      margin: 0 0 2em;
+    }
+
+    code {
+      display: block;
+      font-family: Consolas, Monaco, 'Andale Mono', 'Lucida Console', monospace;
+      width: auto;
+      max-width: 58em;
+      font-size: .9rem;
+    }
+
+    p {
+      margin-bottom: .25em;
+      max-width: 40em;
+      line-height: 1.3;
+    }
+
+    p img {
+      margin-bottom: -0.1em;
+    }
+
+    a {
+      background: linear-gradient(to top, #ffffff 0%,#ffffff 12%,#111111 13%,#111111 15%,#ffffff 15.5%,#ffffff 100%);
+      color: currentColor;
+      text-decoration: none;
+    }
+
+    figure {
+      margin: 1.5em 0 4em;
+    }
+
+      figure p:before {
+        content: "\2014 ";
+        display: inline-block;
+        margin: 0 .5em 0 2em;
+      }
+
+  </style>
 
 </head>
 <body>
 
-  <p></p>
+  <h1>Adminify</h1>
+
+  <p>A little bookmarklet to make it easier to switch between viewing the front and back end of a Shopify site.</p>
+
+  <p>Add the following snippet to the top of your `theme.liquid`</p>
 
   <a href="javascript:(function()%7Bfunction getShopifyAdminLink() %7Bvar shopifyDomain %3D %27//%27 %2B document.head.querySelector(%27%23AdminifyShopifyUrl%27).getAttribute(%27content%27),  shopifyContent %3D document.head.querySelector(%27%23AdminifyShopifyEdit%27)%3Bif ( shopifyContent.getAttribute(%27name%27) %3D%3D%3D %27index%27 ) %7Breturn shopifyDomain %2B %27/admin/%27%3B%7Dreturn shopifyDomain %2B %27/admin/%27 %2B shopifyContent.getAttribute(%27name%27) %2B %27s/%27 %2B shopifyContent.getAttribute(%27content%27)%3B%7D%3Bwindow.open( getShopifyAdminLink(), %27_blank%27 )%3B%7D)()%3B">📝Adminify</a>
 
