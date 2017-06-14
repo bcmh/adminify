@@ -1,4 +1,4 @@
-Adminify
+📝 Adminify
 ===
 
 A little bookmarklet to make it easier to switch between viewing the front and back end of a Shopify site.
